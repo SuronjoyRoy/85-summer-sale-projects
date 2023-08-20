@@ -18,7 +18,7 @@
                      above & get <span class="text-[#e73ab9]">20% off</span>
                   </h1>
                   <div class="home-btn flex mt-6">
-                    <p class="ml-12 mr-4">Use Promo Code</p>
+                    <p class="ml-12 mt-2 mr-4">Use Promo Code</p>
                   <button class="py-2 px-5 rounded-xl text-white font-medium bg-[#e527b2]">
                     SELL200</button>
                   </div>
@@ -30,13 +30,13 @@
          </div>
       </header>
       <main class="bg-[#f8f8f8]">
-        <section class="py-12 mx-10">
+        <section class="pt-12 mx-10">
             <h3 class="text-3xl font-semibold mb-10">Kitchenware</h3>
             <div class="flex">
             <div class="w-3/4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-               <!-- First Review -->
-          <div class="card card-compact p-5 border bg-white">
+               <!-- First Card -->
+          <div onclick="addingItemCart(this)" class="card card-compact p-5 border bg-white text-center cursor-pointer">
             <figure class="bg-[#f3f3f3]">
                <img class="w-36 h-[160px]" src="./images/prod1.png" alt="prod1" />
             </figure>
@@ -48,14 +48,12 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200"/>
                 </div>
-              <div class="text-center">
-                <h4 class="text-2xl font-bold text-black pb-2">K. Accessories</h4>
-                <p><span>39.00</span> TK</p>
-              </div>
             </div>
+            <h4 class="text-2xl font-bold text-black pb-2">K. Accessories</h4>
+            <p>39.00 TK</p>
           </div>
                <!-- Second Card -->
-          <div class="card card-compact p-5 border bg-white">
+          <div onclick="addingItemCart(this)" class="card text-center card-compact p-5 border cursor-pointer bg-white">
             <figure class="bg-[#f3f3f3]">
                <img class="w-36 h-[160px]" src="./images/prod2.png" alt="prod1" />
             </figure>
@@ -67,14 +65,12 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200"/>
                 </div>
-              <div class="text-center">
-                <h4 class="text-2xl font-bold text-black pb-2">K. Accessories</h4>
-                <p><span>25.00</span> TK</p>
-              </div>
             </div>
+            <h4 class="text-2xl font-bold text-black pb-2">K. Accessories</h4>
+             <p><span>25.00</span> TK</p>
           </div>
                <!-- Thired card -->
-          <div class="card card-compact p-5 border bg-white">
+          <div onclick="addingItemCart(this)" class="card text-center card-compact p-5 border cursor-pointer bg-white">
             <figure class="bg-[#f3f3f3]">
                <img class="w-36 h-[160px]" src="./images/prod3.png" alt="prod1" />
             </figure>
@@ -86,37 +82,43 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200"/>
                 </div>
-              <div class="text-center">
-                <h4 class="text-2xl font-bold text-black pb-2">Home Cooker</h4>
-                <p><span>49.00</span> TK</p>
-              </div>
             </div>
+            <h4 class="text-2xl font-bold text-black pb-2">Home Cooker</h4>
+            <p><span>49.00</span> TK</p>
           </div>
             </div>
          </div>
-
-         <div class="hava-cupon-total w-1/4">
-            <div class="bg-white pl-4 py-5">
+<!-- Have a disount section area -->
+         <div class="hava-cupon-total w-1/4 ml-3">
+            <div class="bg-white pl-4 pt-4 pb-5 border-b-2 mb-6">
                <h3 class="font-medium mb-5 mt-5">Have coupon?</h3>
             <div class="apply-btn flex w-1/5">
-               <input class="border" type="text" placeholder="Coupon code">
-               <button class="btn bg-[#e527b2]">Apply</button>
+               <input class="border pl-3" type="text" placeholder="Coupon code">
+               <button id="discount-btn" disabled class="btn bg-[#e527b2]">Apply</button>
             </div>
             </div>
-            <div class="total">
+            <div class="pl-4 p-6 border-b-2" id="price-item">
 
+            </div>
+            <div class="adding-item pl-4">
+              <div >
+                <h3 class="text-1xl font-medium mb-3 mt-3">Total price:<span id="total">00</span>Tk</h3>
+                <h3 class="text-1xl font-medium mb-3">Discount price:<span id="discount">00</span>Tk</h3>
+                <h3 class="text-1xl font-medium border-b-2 mb-3 pb-4">Total price:<span id="all-total">00</span>Tk</h3>
+              </div>
+              <button disabled id="purchase-btn" class="btn  bg-[#e527b2] px-10 py-3 text-white">Make Purchase</button>
             </div>
           </div>
          </div>
         </section>
         <!-- Sportswear section -->
-        <section class="py-12 mx-10">
+        <section class="mx-10">
             <h3 class="text-3xl font-semibold mb-10">Sportswear</h3>
             <div class="flex">
             <div class="w-3/4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                <!-- First Card -->
-          <div class="card card-compact p-5 border bg-white">
+          <div onclick="addingItemCart(this)" class="card text-center card-compact p-5 border cursor-pointer bg-white">
             <figure class="bg-[#f3f3f3]">
                <img class="w-36 h-[160px]" src="./images/prod4.png" alt="prod1" />
             </figure>
@@ -128,14 +130,12 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200"/>
                 </div>
-              <div class="text-center">
-                <h4 class="text-2xl font-bold text-black pb-2">Sports Back Cap</h4>
-                <p><span>49.00</span> TK</p>
-              </div>
             </div>
+            <h4 class="text-2xl font-bold text-black pb-2">Sports Back Cap</h4>
+            <p><span>49.00</span> TK</p>
           </div>
                <!-- Second Card -->
-          <div class="card card-compact p-5 border bg-white">
+          <div onclick="addingItemCart(this)" class="card text-center card-compact p-5 border cursor-pointer bg-white">
             <figure class="bg-[#f3f3f3]">
                <img class="w-36 h-[160px]" src="./images/prod5.png" alt="prod1" />
             </figure>
@@ -147,14 +147,12 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200"/>
                 </div>
-              <div class="text-center">
-                <h4 class="text-2xl font-bold text-black pb-2">Full Jersey Set</h4>
-                <p><span>69.00</span> TK</p>
-              </div>
             </div>
+            <h4 class="text-2xl font-bold text-black pb-2">Full Jersey Set</h4>
+            <p><span>69.00</span> TK</p>
           </div>
                <!-- Thired card -->
-          <div class="card card-compact p-5 border bg-white">
+          <div onclick="addingItemCart(this)" class="card text-center card-compact p-5 border cursor-pointer bg-white">
             <figure class="bg-[#f3f3f3]">
                <img class="w-36 h-[160px]" src="./images/prod6.png" alt="prod1" />
             </figure>
@@ -166,11 +164,9 @@
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-200"/>
                 </div>
-              <div class="text-center">
-                <h4 class="text-2xl font-bold text-black pb-2">Sports cates</h4>
-                <p><span>159.00</span> TK</p>
-              </div>
             </div>
+            <h4 class="text-2xl font-bold text-black pb-2">Sports cates</h4>
+            <p><span>159.00</span> TK</p>
           </div>
             </div>
          </div>
