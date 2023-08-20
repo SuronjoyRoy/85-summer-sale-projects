@@ -23,5 +23,22 @@ function addingItemCart(target){
     if(total>200){
         discoutnBtn.removeAttribute('disabled')
     }
+
+    // let discount=0;
+
+    document.getElementById('discount-btn').addEventListener('click', function(){
+
+        const cuponField = document.getElementById('cuponField');
+        const cuponValue = cuponField.value;
+        const cupon = parseFloat(cuponValue);
+
+        if(cupon==='SELL200'){
+            const dsicountCupon= ((cupon - total)/total)*100;
+            console.log(dsicountCupon)
+
+            const discountPrice=document.getElementById('cuponField');
+            discountPrice.innerText=dsicountCupon;
+        }
+    })
 }
 
