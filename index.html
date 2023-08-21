@@ -98,15 +98,26 @@
             </div>
             </div>
             <div class="pl-4 p-6 border-b-2" id="price-item">
-
+               
             </div>
             <div class="adding-item pl-4">
               <div >
                 <h3 class="text-1xl font-medium mb-3 mt-3">Total price:<span id="total">00</span>Tk</h3>
                 <h3 class="text-1xl font-medium mb-3">Discount price:<span id="discount">00</span>Tk</h3>
-                <h3 class="text-1xl font-medium border-b-2 mb-3 pb-4">Total price:<span id="all-total">00</span>Tk</h3>
+                <h3 class="text-1xl font-medium border-b-2 mb-3 pb-4">Total price:<span id="total-all">00</span>Tk</h3>
               </div>
-              <button disabled id="purchase-btn" class="btn  bg-[#e527b2] px-10 py-3 text-white">Make Purchase</button>
+              <button onclick="my_modal_2.showModal()" disabled id="purchase-btn" class="btn  bg-[#e527b2] px-10 py-3 text-white">Make Purchase</button>
+              <dialog id="my_modal_2" class="modal text-center">
+               <form method="dialog" class="px-20 rounded-lg bg-white">
+                 <img class="mx-auto" src="./images/congo.png" alt="">
+                 <h3 class="font-bold text-lg">Congratulations</h3>
+                 <p class="py-4">Your Purchase the product</p>
+                 <div class="gap-2">
+                   <button id="goHome" class="btn bg-[#e527b2] text-white mb-5">Go Home</button>
+                 </div>
+               </form>
+         
+             </dialog>
             </div>
           </div>
          </div>
