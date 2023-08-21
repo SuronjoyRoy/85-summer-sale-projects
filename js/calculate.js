@@ -10,8 +10,6 @@ function addingItemCart(target){
     const price=(target.childNodes[7].innerText.split(' ')[0]);
     total=parseInt(total) + parseInt(price);
     document.getElementById('total').innerText=total;
-    // console.log(total);
-
 
     const pruchasBtn=document.getElementById('purchase-btn');
 
@@ -35,7 +33,7 @@ function addingItemCart(target){
             discountPrice.innerText=dsicountCupon.toFixed(2);
             allTotalPrice= total - dsicountCupon;
             document.getElementById('total-all').innerText=allTotalPrice;
-            // console.log(discountPrice);
+            
         }
     })
 
